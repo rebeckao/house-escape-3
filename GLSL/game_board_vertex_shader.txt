@@ -1,0 +1,13 @@
+#version 330 core
+
+in vec2 vertex_position;
+
+uniform mat4 mvp;
+
+in vec2 texture_coordinate;
+out vec2 fragment_texture_coordinate;
+
+void main(){
+	fragment_texture_coordinate = texture_coordinate;
+	gl_Position = mvp*vec4(vertex_position,0.0,1.0);
+}

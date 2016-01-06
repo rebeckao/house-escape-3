@@ -1,0 +1,11 @@
+#version 330 core
+
+in vec2 fragment_texture_coordinate;
+
+out vec4 out_color;
+
+uniform sampler2D my_2D_sampler;
+
+void main(){
+	out_color = texture(my_2D_sampler,fragment_texture_coordinate);
+}
